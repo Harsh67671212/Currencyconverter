@@ -1,2 +1,2 @@
 # Currencyconverter
-In this project i have used python 
+In this project i have used Frontend 
