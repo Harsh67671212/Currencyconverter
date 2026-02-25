@@ -1,14 +1,14 @@
-// ================= CONFIG =================
+
 const BASE_URL = "https://api.frankfurter.app/latest";
 
-// ================= SELECTORS =================
+
 const dropdowns = document.querySelectorAll(".dropdown select");
 const btn = document.querySelector("form button");
 const fromCurr = document.querySelector(".from select");
 const toCurr = document.querySelector(".to select");
 const msg = document.querySelector(".msg");
 
-// ================= DROPDOWN SETUP =================
+
 for (let select of dropdowns) {
   for (let currCode in countryList) {
     let newOption = document.createElement("option");
@@ -30,7 +30,7 @@ for (let select of dropdowns) {
   });
 }
 
-// ================= EXCHANGE RATE =================
+
 const updateExchangeRate = async () => {
   let amountInput = document.querySelector(".amount input");
   let amtVal = amountInput.value;
@@ -57,7 +57,6 @@ const updateExchangeRate = async () => {
   }
 };
 
-// ================= FLAG UPDATE =================
 const updateFlag = (element) => {
   let currCode = element.value;
   let countryCode = countryList[currCode];
@@ -75,3 +74,4 @@ btn.addEventListener("click", (evt) => {
 window.addEventListener("load", () => {
   updateExchangeRate();
 });
+
